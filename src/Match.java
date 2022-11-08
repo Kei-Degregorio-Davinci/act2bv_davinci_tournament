@@ -42,8 +42,15 @@ public class Match {
                     this.getLocalTeamScore(),
                     this.getVisitantTeamScore(),
                     this.getLocalTeam().getName()
+
             );
+
         }
+
+        public void generatePlayersList() {
+            this.getLocalTeam().getPlayers().forEach(player -> System.out.println(player.getName()));
+            this.getVisitantTeam().getPlayers().forEach(player -> System.out.println(player.getName()));
+       }
 
 
         // setter location

@@ -46,8 +46,15 @@ public class Main {
 
         torneoDaVinci.addMatch(primerParcial);
 
-        System.out.println(primerParcial.generateMarker());
-        
+
+        primerParcial.generatePlayersList();
+        System.out.println("Anoto el equipo local");
+        primerParcial.incrementLocalTeamScore();
+        System.out.println("Anoto el equipo visitante");
+        primerParcial.incrementLocalTeamScore();
+        System.out.println("Anoto el equipo visitante");
+        primerParcial.incrementVisitantTeamScore();
+        System.out.println("resultado:" + primerParcial.generateMarker());
 
 
         //System.out.println(profes.getPlayers().size());
