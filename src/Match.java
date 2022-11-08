@@ -41,7 +41,7 @@ public class Match {
                     this.getLocalTeam().getName(),
                     this.getLocalTeamScore(),
                     this.getVisitantTeamScore(),
-                    this.getLocalTeam().getName()
+                    this.getVisitantTeam().getName()
 
             );
 
