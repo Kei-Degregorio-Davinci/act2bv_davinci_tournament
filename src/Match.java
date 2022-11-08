@@ -8,8 +8,26 @@ public class Match {
         private int localTeamScore;
         private int visitantTeamScore;
 
+        Match() {
+            this.localTeamScore = 0;
+            this.visitantTeamScore = 0;
+        }
 
-        // settter location
+        Match(String location) {
+            this.localTeamScore = 0;
+            this.visitantTeamScore = 0;
+            this.setLocation(location);
+        }
+
+        Match(String location, Date date) {
+            this.localTeamScore =0;
+            this.visitantTeamScore =0;
+            this.setLocation(location);
+            this.setDate(date);
+        }
+
+
+        // setter location
         public void setLocation(String location) {
             this.location = location;
         }

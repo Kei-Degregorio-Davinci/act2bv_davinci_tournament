@@ -13,21 +13,14 @@ public class Main {
                 "Torneo POO 2022, 2do Cuatri", comienzoDeCuatri, finDelCuatri);
 
 
+        Date fechaDeParcial = new Date(2022,8,29);
 
-
-        Match primerParcial = new Match();
-        primerParcial.setLocation("Aula virtual de POO jueves");
-
-        Date fechaDeParcial = new Date();
-        fechaDeParcial.setYear(2022);
-        fechaDeParcial.setMonth(8); // Sep es 8
-        fechaDeParcial.setDate(29);
-        primerParcial.setDate(fechaDeParcial);
 
         Team profes = new Team();
         Team estudiante = new Team();
 
         //....
+        Match primerParcial = new Match("Aula virtual de POO jueves", fechaDeParcial);
 
         torneoDaVinci.addMatch(primerParcial);
 
