@@ -15,13 +15,29 @@ public class Main {
 
         Date fechaDeParcial = new Date(2022,8,29);
 
-
-        Team profes = new Team();
-        Team estudiante = new Team();
-
-        //....
         Match primerParcial = new Match("Aula virtual de POO jueves", fechaDeParcial);
 
+        Player profeSergio = new Player("Sergio Medina");
+        Player coordinador = new Player("Coordinador AdS");
+        Player suplentePoo = new Player("Suplente POO");
+
+        Team profes = new Team();
+
+        profes.addPlayer(profeSergio);
+        profes.addPlayer(coordinador);
+        profes.addPlayer(suplentePoo);
+
+        System.out.println(profes.getPlayers().size());
+
+        Team estudiante = new Team();
+
+        estudiante.addPlayer(new Player("San Martin"));
+        estudiante.addPlayer(new Player("Manuel Belgrano"));
+        estudiante.addPlayer(new Player("Mariano Moreno"));
+
+        //....
+        primerParcial.setLocalTeam(profes);
+        primerParcial.setVisitantTeam(estudiante);
         torneoDaVinci.addMatch(primerParcial);
 
 

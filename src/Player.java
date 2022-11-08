@@ -4,6 +4,12 @@ public class Player {
         private String position;
         private int goalCounter;
 
+        Player(String name) {
+            this.setName(name);
+            this.setGoalCounter(0);
+        }
+
+
         // void -> String
         public String getName() {
             return this.name;
