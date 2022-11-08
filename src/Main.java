@@ -19,11 +19,11 @@ public class Main {
         Date fechaDeParcial = new Date(2022,8,29);
 
 
+        Team profes = new Team("Equipo de profes");
         Player profeSergio = new Player("Sergio Medina");
         Player coordinador = new Player("Coordinador AdS");
         Player suplentePoo = new Player("Suplente POO");
 
-        Team profes = new Team();
 
         profes.addPlayer(profeSergio);
         profes.addPlayer(coordinador);
@@ -31,7 +31,9 @@ public class Main {
 
         System.out.println(profes.getPlayers().size());
 
-        Team estudiantes = new Team();
+        Team estudiantes = new Team("Equipo de estudiantes");
+
+
 
         estudiantes.addPlayer(new Player("San Martin"));
         estudiantes.addPlayer(new Player("Manuel Belgrano"));
