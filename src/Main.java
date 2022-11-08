@@ -21,24 +21,20 @@ public class Main {
 
 
         Team profes = new Team("Equipo de profes");
-        Player profeSergio = new Player("Sergio Medina");
-        Player coordinador = new Player("Coordinador AdS");
-        Player suplentePoo = new Player("Suplente POO");
-
-
-        profes.addPlayer(profeSergio);
-        profes.addPlayer(coordinador);
-        profes.addPlayer(suplentePoo);
+        profes.addPlayer(new Player("Profe Poo"));
+        profes.addPlayer(new Player("Profe Adp"));
+        profes.addPlayer(new Player("Profe Pwl"));
+        profes.addPlayer(new Player("Profe Ux"));
+        profes.addPlayer(new Player("Profe Pw2"));
 
         System.out.println(profes.getPlayers().size());
 
         Team estudiantes = new Team("Equipo de estudiantes");
-
-
-
-        estudiantes.addPlayer(new Player("San Martin"));
-        estudiantes.addPlayer(new Player("Manuel Belgrano"));
-        estudiantes.addPlayer(new Player("Mariano Moreno"));
+        estudiantes.addPlayer(new Player("Estudiante Martin"));
+        estudiantes.addPlayer(new Player("Estudiante Manuel"));
+        estudiantes.addPlayer(new Player("Estudiante Marcos"));
+        estudiantes.addPlayer(new Player("Estudiante Santino"));
+        estudiantes.addPlayer(new Player("Estudiante Mateo"));
 
         //....
         Match primerParcial = new Match(
