@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String arg[]){
@@ -57,51 +58,6 @@ public class Main {
         System.out.println("resultado:" + primerParcial.generateMarker());
 
 
-        //System.out.println(profes.getPlayers().size());
-        //System.out.println(String.format("Cantidad de match: %d",torneoDaVinci.getMatchs().size()));
-
-        ArrayList<Match> partidosDeHoy = torneoDaVinci.getMatchs();
-
-        //partidosDeHoy.get(0).getLocalTeam().incrementGoalCounter();
-        //partidosDeHoy.get(0).getLocalTeam().incrementGoalCounter();
-        //partidosDeHoy.get(0).getVisitantTeam().incrementGoalCounter();
-
-        System.out.println(
-                partidosDeHoy
-                        .get(0)
-                        .getDate()
-        );
-
-        System.out.println(
-                partidosDeHoy
-                        .get(0)
-                        .getLocalTeam()
-                        .getName()
-        );
-
-        System.out.println(
-                partidosDeHoy
-                        .get(0)
-                        .getLocalTeam()
-                        .getGoalCounter()
-        );
-
-        System.out.println(
-                partidosDeHoy
-                        .get(0)
-                        .getVisitantTeam()
-                        .getName()
-        );
-
-        System.out.println(
-                partidosDeHoy
-                        .get(0)
-                        .getVisitantTeam()
-                        .getGoalCounter()
-        );
-
-
-
-
+        }
     }
-}
+
