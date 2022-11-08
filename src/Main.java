@@ -10,12 +10,14 @@ public class Main {
         Date finDelCuatri = new Date(2022,11,5);
 
         Season torneoDaVinci = new Season(
-                "Torneo POO 2022, 2do Cuatri", comienzoDeCuatri, finDelCuatri);
+                "Torneo POO 2022, 2do Cuatri",
+                comienzoDeCuatri,
+                finDelCuatri
+        );
 
 
         Date fechaDeParcial = new Date(2022,8,29);
 
-        Match primerParcial = new Match("Aula virtual de POO jueves", fechaDeParcial);
 
         Player profeSergio = new Player("Sergio Medina");
         Player coordinador = new Player("Coordinador AdS");
@@ -29,17 +31,21 @@ public class Main {
 
         System.out.println(profes.getPlayers().size());
 
-        Team estudiante = new Team();
+        Team estudiantes = new Team();
 
-        estudiante.addPlayer(new Player("San Martin"));
-        estudiante.addPlayer(new Player("Manuel Belgrano"));
-        estudiante.addPlayer(new Player("Mariano Moreno"));
+        estudiantes.addPlayer(new Player("San Martin"));
+        estudiantes.addPlayer(new Player("Manuel Belgrano"));
+        estudiantes.addPlayer(new Player("Mariano Moreno"));
 
         //....
-        primerParcial.setLocalTeam(profes);
-        primerParcial.setVisitantTeam(estudiante);
-        torneoDaVinci.addMatch(primerParcial);
+        Match primerParcial = new Match(
+                "Aula virtual de POO jueves",
+                fechaDeParcial,
+                profes,
+                estudiantes
+        );
 
+        torneoDaVinci.addMatch(primerParcial);
 
     }
 }
