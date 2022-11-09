@@ -50,14 +50,15 @@ public class Main {
 
         primerParcial.generatePlayersList();
         System.out.println("Anoto el equipo local");
-        primerParcial.incrementLocalTeamScore();
+        primerParcial.makeLocalGoal(0);
         System.out.println("Anoto el equipo visitante");
-        primerParcial.incrementLocalTeamScore();
+        primerParcial.makeVisitantGoal(0);
         System.out.println("Anoto el equipo visitante");
-        primerParcial.incrementVisitantTeamScore();
+        primerParcial.makeLocalGoal(0);
         System.out.println("resultado:" + primerParcial.generateMarker());
 
-
         }
+
+
     }
 
