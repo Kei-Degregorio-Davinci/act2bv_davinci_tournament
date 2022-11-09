@@ -20,10 +20,8 @@ public class Main {
 
         Date fechaDeParcial = new Date(2022,8,29);
 
-        Match primerParcial = new Match("Aula virtual de POO jueves", fechaDeParcial);
 
-
-        Team profes = new Team();
+        Team profes = new Team("Equipo de profes");
         profes.addPlayer(new Player("Profe Poo"));
         profes.addPlayer(new Player("Profe Adp"));
         profes.addPlayer(new Player("Profe Pwl"));
@@ -32,7 +30,7 @@ public class Main {
 
         System.out.println(profes.getPlayers().size());
 
-        Team estudiantes = new Team();
+        Team estudiantes = new Team("Equipo de estudiantes");
         estudiantes.addPlayer(new Player("Estudiante Martin"));
         estudiantes.addPlayer(new Player("Estudiante Manuel"));
         estudiantes.addPlayer(new Player("Estudiante Marcos"));
