@@ -134,6 +134,7 @@ public class Match {
             if (isVisitantTeam(team)) incrementVisitantTeamScore();
 
             team.incrementGoalCounter();
+            player.incrementGoalCounter();
         }
 
         public void makeLocalGoal (int playerPosition){
