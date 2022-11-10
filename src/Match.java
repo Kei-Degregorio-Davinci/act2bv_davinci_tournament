@@ -5,30 +5,28 @@ public class Match {
         private String location;
         private Team localTeam;
         private Team visitantTeam;
-        private int localTeamScore;
-        private int visitantTeamScore;
+        private MatchResult result;
 
         Match() {
-            this.localTeamScore = 0;
-            this.visitantTeamScore = 0;
+            this.result = new MatchResult();
+
         }
 
         Match(String location) {
-            this.localTeamScore = 0;
-            this.visitantTeamScore = 0;
+            this.result = new MatchResult();
             this.setLocation(location);
         }
 
         Match(String location, Date date) {
-            this.localTeamScore =0;
-            this.visitantTeamScore =0;
+            this.result = new MatchResult();
             this.setLocation(location);
             this.setDate(date);
         }
 
         Match(String location, Date date, Team localTeam,Team visitantTeam) {
-            this.localTeamScore= 0;
-            this.visitantTeamScore= 0;
+            this.result = new MatchResult();
+            this.result.getLocalTeamScore();
+            this.result.getVisitantTeamScore();
             this.setLocation(location);
             this.setDate(date);
             this.setLocalTeam(localTeam);
@@ -37,10 +35,9 @@ public class Match {
         }
 
         public String generateMarker() {
-            return String.format(  "%s (%d) - (%d) %s",
+            return String.format(  "%s %s %s",
                     this.getLocalTeam().getName(),
-                    this.getLocalTeamScore(),
-                    this.getVisitantTeamScore(),
+                    this.result.generateMarker(),
                     this.getVisitantTeam().getName()
 
             );
@@ -97,27 +94,6 @@ public class Match {
             return;
         }
 
-        // get visitanTeamScore
-        public int getVisitantTeamScore(){
-            return this.visitantTeamScore;
-        }
-
-        // get localTeamScore
-        public int getLocalTeamScore(){
-            return this.localTeamScore;
-        }
-
-        //incrementVisitantTeamScore:: void -> void
-        public void incrementVisitantTeamScore(){
-            this.visitantTeamScore = this.visitantTeamScore + 1;
-            return;
-        }
-
-        //incrementLocalTeamScore:: void -> void
-        public void incrementLocalTeamScore(){
-            this.localTeamScore ++;
-            return;
-        }
 
         public boolean isLocalTeam(Team team) {
             return team.getName() == this.localTeam.getName();
@@ -130,11 +106,10 @@ public class Match {
 
         public void makeGoal(Team team, Player player) {
             if (!isVisitantTeam(team) && !isLocalTeam(team)) return;
-            if (isLocalTeam(team)) incrementLocalTeamScore();
-            if (isVisitantTeam(team)) incrementVisitantTeamScore();
-
+            if (isLocalTeam(team)) this.result.incrementLocalTeamScore();
+            if (isVisitantTeam(team)) this.result.incrementVisitantTeamScore();
             team.incrementGoalCounter();
-            player.incrementGoalCounter();
+            player.makeGoal();
         }
 
         public void makeLocalGoal (int playerPosition){
