@@ -8,23 +8,23 @@ public class Match {
         private MatchResult result;
 
         Match() {
-            this.result = new MatchResult();
+            this.result = new MatchResult(this);
 
         }
 
         Match(String location) {
-            this.result = new MatchResult();
+            this.result = new MatchResult(this);
             this.setLocation(location);
         }
 
         Match(String location, Date date) {
-            this.result = new MatchResult();
+            this.result = new MatchResult(this);
             this.setLocation(location);
             this.setDate(date);
         }
 
         Match(String location, Date date, Team localTeam,Team visitantTeam) {
-            this.result = new MatchResult();
+            this.result = new MatchResult(this);
             this.result.getLocalTeamScore();
             this.result.getVisitantTeamScore();
             this.setLocation(location);
