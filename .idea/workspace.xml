@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79613de1-1d3d-4688-8861-b5ab3aa79589" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MatchResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Match.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-    </list>
+    <list default="true" id="79613de1-1d3d-4688-8861-b5ab3aa79589" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +77,7 @@
       <workItem from="1667876485358" duration="17842000" />
       <workItem from="1667952027387" duration="3540000" />
       <workItem from="1667955612462" duration="285000" />
-      <workItem from="1668093153868" duration="957000" />
+      <workItem from="1668093153868" duration="1360000" />
     </task>
     <servers />
   </component>

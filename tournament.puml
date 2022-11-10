@@ -23,8 +23,7 @@ class Match {
 - String location
 - Team localTeam
 - Team visitantTeam
-- int localTeamScore
-- int visitantTeamScore
+- MatchResult result
 ~ <<Create>> Match()
 ~ <<Create>> Match(String)
 ~ <<Create>> Match(String,Date)
@@ -38,15 +37,23 @@ class Match {
 + void setLocalTeam(Team)
 + Team getVisitantTeam()
 + void setVisitantTeam(Team)
-+ int getVisitantTeamScore()
-+ int getLocalTeamScore()
-+ void incrementVisitantTeamScore()
-+ void incrementLocalTeamScore()
 + boolean isLocalTeam(Team)
 + boolean isVisitantTeam(Team)
 + void makeGoal(Team,Player)
 + void makeLocalGoal(int)
 + void makeVisitantGoal(int)
+}
+class MatchResult {
+- int localTeamScore
+- int visitantTeamScore
++ <<Create>> MatchResult()
++ int getLocalTeamScore()
++ void setLocalTeamScore(int)
++ int getVisitantTeamScore()
++ void setVisitantTeamScore(int)
++ void incrementVisitantTeamScore()
++ void incrementLocalTeamScore()
++ String generateMarker()
 }
 class Season {
 - String name
